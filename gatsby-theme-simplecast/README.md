@@ -1,14 +1,19 @@
 # Gatsby Theme Simplecast
 
-## Usage
+Gatsby theme that sources data from Simplecast API which can be combined with Markdown files to associate more information for each episode. Inspired by [syntax.fm](http://syntax.fm).
 
-1. You'll need a Gatsby site — `gatsby new gatsby-site`
-2. Install theme — `yarn add @vojtaholik/gatsby-theme-simplecast`
-3. Require theme in `gatsby-config.js`:  
-```js
-//gatsby-config.js
+[→ Preview Theme](https://gatsby-theme-simplecast.netlify.com)
 
-module.exports = {
+## Installation
+To use this theme in your Gatsby sites, follow these instructions:
+
+1. Install the theme
+   ```  
+   yarn add @vojtaholik/gatsby-theme-simplecast
+   ```
+2. Add the theme to your `gatsby-config.js`:
+   ```
+  module.exports = {
   plugins: [
     {
       resolve: '@vojtaholik/gatsby-theme-simplecast',
@@ -20,51 +25,16 @@ module.exports = {
     },
   ],
 }
-```
-- Grab [your Simplecast API token here](https://dashboard.simplecast.com/account/private-apps).
-- Podcast ID can be found in your Simplecast account under embeds settings.
+   ```
+1. Configure
+   - `simplecastApiSecret`: Grab [your Simplecast API token here](https://dashboard.simplecast.com/account/private-apps).
+   - `podcastId`: Podcast ID can be found in your Simplecast account under embeds settings.
+   - `markdownPath`: Path to your markdown files. For markdown file to show up, it's `frontmatter.id` must match `episode.id`.
 
+2. Create index page in `src/pages/index.js` 
+   - Use [this demo](https://github.com/vojtaholik/gatsby-theme-simplecast/blob/master/demo/src/pages/index.js) to display latest episode on index page.
 
-## Create `index.js` page
-- copy paste from [this demo](https://github.com/vojtaholik/gatsby-theme-simplecast/blob/master/demo/src/pages/index.js)
-
-
-
-## Using markdown to provide episode details
-- `frontmatter.id` has to match episode id to show up. 
-
-```js
-// content/episodes/1/index.md
-
----
-// required
-id: '123' // has to match episode id
-// not required
-title: 'Podcast episode 1'
-slug: 'podcast-episode-1'
-summary: 'Summary. Lorem ipsum dolor sit amet.'
-number: 1
-resources: ['[Link](/)','[Link](/)','[Link](/)']
-guestName: 'Guest Name'
-guestSummary: 'Guest bio - [Twitter](/)'
-guestPhoto: 'guest-name.png'
-image: './banner.png'
----
-
-Markdown description...
-```
-
-
-
-## Customizing styles
-
-To customize styles, shadow a theme object by creating `src/gatsby-plugin-theme-ui/index.js` with following code:
-```js
-export default {
-    colors: {
-        primary: 'rebeccapurple'
-    }
-    // your styles
-}
-```
-
+3. Start your site
+   ```
+   gatsby develop
+   ```

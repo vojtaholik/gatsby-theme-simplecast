@@ -2,7 +2,7 @@
   "name": "@vojtaholik/gatsby-theme-simplecast",
   "main": "index.js",
   "description": "Simplecast gatsby theme.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Vojta Holik <vojta@egghead.io>",
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -43,7 +43,9 @@
     "theme-ui": "^0.2.16"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
   ],
   "license": "MIT",
   "scripts": {

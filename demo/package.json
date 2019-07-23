@@ -9,7 +9,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@vojtaholik/gatsby-theme-simplecast": "^1.0.2",
+    "@vojtaholik/gatsby-theme-simplecast": "^1.0.3",
     "gatsby": "^2.13.35",
     "gatsby-plugin-theme-ui": "^0.2.6",
     "gatsby-theme-ui": "^0.2.0",
