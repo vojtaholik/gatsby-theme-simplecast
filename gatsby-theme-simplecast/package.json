@@ -1,9 +1,8 @@
 {
   "name": "@vojtaholik/gatsby-theme-simplecast",
-  "private": true,
   "main": "index.js",
-  "description": "A simplecast gatsby theme.",
-  "version": "1.0.0",
+  "description": "Simplecast gatsby theme.",
+  "version": "1.0.1",
   "author": "Vojta Holik <vojta@egghead.io>",
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -14,7 +13,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^8.0.0",
     "fs": "^0.0.1-security",
-    "gatsby": "^2.13.33",
+    "gatsby": "^2.13.34",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
@@ -26,17 +25,18 @@
     "gatsby-transformer-json": "^2.2.2",
     "gatsby-transformer-remark": "^2.6.9",
     "gatsby-transformer-sharp": "^2.2.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-markdown": "^4.1.0",
+    "react-onclickoutside": "^6.8.0",
     "theme-ui": "^0.2.16"
   },
   "devDependencies": {
-    "gatsby": "^2.13.33",
+    "gatsby": "^2.13.34",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -63,7 +63,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.33",
+    "gatsby": "^2.13.34",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "theme-ui": "^0.2.16"

@@ -6,7 +6,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-theme-ui`,
     {
-      resolve: 'gatsby-theme-simplecast',
+      resolve: '@vojtaholik/gatsby-theme-simplecast',
       options: {
         simplecastApiSecret: process.env.SIMPLECAST_API_SECRET,
         //podcastId: process.env.PODCAST_ID,

@@ -1,11 +1,10 @@
 /** @jsx jsx */
-// boop
 import React from "react"
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 import Episode from "gatsby-theme-simplecast/src/templates/episode"
 
-function IndexPage({ data: { allEpisode, allMarkdownRemark } }) {
+function Index({ data: { allEpisode, allMarkdownRemark } }) {
   const MarkdownForLatestEpisode = allMarkdownRemark.edges.filter(
     Markdown => Markdown.node.frontmatter.id === allEpisode.nodes[0].id
   )
@@ -19,7 +18,7 @@ function IndexPage({ data: { allEpisode, allMarkdownRemark } }) {
     />
   )
 }
-export default IndexPage
+export default Index
 
 export const indexQuery = graphql`
   query {

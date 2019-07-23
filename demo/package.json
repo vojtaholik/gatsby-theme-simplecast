@@ -9,8 +9,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby-theme-simplecast": "*",
-    "gatsby": "^2.13.33",
+    "@vojtaholik/gatsby-theme-simplecast": "^1.0.1",
+    "gatsby": "^2.13.34",
     "gatsby-plugin-theme-ui": "^0.2.6",
     "gatsby-theme-ui": "^0.2.0",
     "react": "^16.8.6",

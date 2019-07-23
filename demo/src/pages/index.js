@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import IndexPage from 'gatsby-theme-simplecast/src/pages/index'
+import IndexPage from '@vojtaholik/gatsby-theme-simplecast/src/pages/index'
 
 export default function Index({data: {allEpisode, allMarkdownRemark}}) {
   return <IndexPage data={{allEpisode, allMarkdownRemark}} />
