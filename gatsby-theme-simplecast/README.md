@@ -1,6 +1,6 @@
 # Gatsby Theme Simplecast
 
-Gatsby theme that sources data from Simplecast API which can be combined with Markdown files to associate more information for each episode. Inspired by [syntax.fm](http://syntax.fm).
+Gatsby theme that sources data from Simplecast API which can be combined with Markdown files to associate more information to each episode. Inspired by [syntax.fm](http://syntax.fm).
 
 [→ Preview Theme](https://gatsby-theme-simplecast.netlify.com)
 
@@ -12,7 +12,7 @@ To use this theme in your Gatsby sites, follow these instructions:
    yarn add @vojtaholik/gatsby-theme-simplecast
    ```
 2. Add the theme to your `gatsby-config.js`:
-   ```
+  ```
   module.exports = {
   plugins: [
     {
@@ -25,7 +25,7 @@ To use this theme in your Gatsby sites, follow these instructions:
     },
   ],
 }
-   ```
+  ```
 1. Configure
    - `simplecastApiSecret`: Grab [your Simplecast API token here](https://dashboard.simplecast.com/account/private-apps).
    - `podcastId`: Podcast ID can be found in your Simplecast account under embeds settings.
