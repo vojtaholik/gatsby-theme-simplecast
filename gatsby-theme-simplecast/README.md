@@ -10,9 +10,8 @@
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-theme-ui`,
     {
-      resolve: 'gatsby-theme-simplecast',
+      resolve: '@vojtaholik/gatsby-theme-simplecast',
       options: {
         podcastId: PODCAST_ID, // theme uses mockup data if no podcastId provided
         simplecastApiSecret: SIMPLECAST_API_SECRET, 
