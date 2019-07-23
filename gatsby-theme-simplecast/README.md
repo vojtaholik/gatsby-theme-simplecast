@@ -32,7 +32,7 @@ module.exports = {
 
 
 ## Using markdown to provide episode details
-- `id` has to match episode id to show up. 
+- `frontmatter.id` has to match episode id to show up. 
 
 `content/episodes/1/index.md`:
 ```js
