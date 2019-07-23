@@ -2,7 +2,7 @@
   "name": "@vojtaholik/gatsby-theme-simplecast",
   "main": "index.js",
   "description": "Simplecast gatsby theme.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Vojta Holik <vojta@egghead.io>",
   "dependencies": {
     "@emotion/core": "^10.0.14",
@@ -13,7 +13,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^8.0.0",
     "fs": "^0.0.1-security",
-    "gatsby": "^2.13.34",
+    "gatsby": "^2.13.35",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
@@ -57,10 +57,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/vojtaholik/gatsby-theme-simplecast"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/vojtaholik/gatsby-theme-simplecast/issues"
   },
   "peerDependencies": {
     "gatsby": "^2.13.34",
