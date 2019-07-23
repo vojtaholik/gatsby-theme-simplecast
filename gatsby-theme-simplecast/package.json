@@ -1,0 +1,71 @@
+{
+  "name": "@vojtaholik/gatsby-theme-simplecast",
+  "private": true,
+  "main": "index.js",
+  "description": "A simplecast gatsby theme.",
+  "version": "1.0.0",
+  "author": "Vojta Holik <vojta@egghead.io>",
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@mdx-js/react": "^1.0.27",
+    "@sindresorhus/slugify": "^0.9.1",
+    "axios": "^0.19.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "gatsby": "^2.13.33",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.9",
+    "gatsby-plugin-theme-ui": "^0.2.6",
+    "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-theme-ui": "^0.2.0",
+    "gatsby-transformer-json": "^2.2.2",
+    "gatsby-transformer-remark": "^2.6.9",
+    "gatsby-transformer-sharp": "^2.2.4",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "react-markdown": "^4.1.0",
+    "theme-ui": "^0.2.16"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.33",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "theme-ui": "^0.2.16"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.33",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "theme-ui": "^0.2.16"
+  }
+}

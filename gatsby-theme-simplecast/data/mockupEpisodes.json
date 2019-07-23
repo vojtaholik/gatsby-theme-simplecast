@@ -1,0 +1,278 @@
+{
+  "href": "https://api.simplecast.com/podcasts/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/episodes?limit=10",
+  "pages": {
+    "total": 5,
+    "previous": null,
+    "next": {
+      "href": "https://api.simplecast.com/podcasts/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/episodes?limit=10&offset=10&private=true&status=importing%2Caudio_imported%2Ctranscoding%2Ctranscoding_error%2Cdraft%2Cscheduled%2Cpublished%2Cdirty%2Cprivate"
+    },
+    "limit": 10,
+    "current": 1
+  },
+  "dashboard_link": "https://dashboard.simplecast.com/shows/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/episodes",
+  "create": null,
+  "count": 47,
+  "collection": [
+    {
+      "updated_at": "2019-07-07T21:18:37.988516-07:00",
+      "type": "full",
+      "token": "GRGoBLV0",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "podcast-episode-1",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-07-07T21:18:37.988429-07:00",
+      "number": 47,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/55d7f360-05c1-43af-9c2d-eb89e156734a/2965154a-b5d2-4479-ab85-6a8b06242014/j_c_hiatt.jpg",
+      "image_path": "/prod/images/55d7f360-05c1-43af-9c2d-eb89e156734a/2965154a-b5d2-4479-ab85-6a8b06242014/j_c_hiatt.jpg",
+      "id": "1abc",
+      "href": "https://api.simplecast.com/episodes/39917452-ddc9-4b42-8471-a07fc4487277?preview=true",
+      "guid": "a985054e-dc9b-45dd-93c9-3691c3690bec",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/39917452-ddc9-4b42-8471-a07fc4487277/podcast_john_lindquist_with_jc_hiatt_v1_mp3_tc.mp3",
+      "description": "J.C Hiatt talks about what he did to organize the conference MagnoliaJS and why he did it to help his community. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=39917452-ddc9-4b42-8471-a07fc4487277&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T12:44:03.792833-07:00",
+      "type": "full",
+      "token": "cMNsoKRl",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "podcast-episode-2",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-05-31T17:22:47.299272-07:00",
+      "number": 46,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/55d7f360-05c1-43af-9c2d-eb89e156734a/3d52cc0a-c791-4b98-95d1-1b2e45b005b1/Jason_Avatar.jpg",
+      "image_path": "/prod/images/55d7f360-05c1-43af-9c2d-eb89e156734a/3d52cc0a-c791-4b98-95d1-1b2e45b005b1/Jason_Avatar.jpg",
+      "id": "2abc",
+      "href": "https://api.simplecast.com/episodes/7979994f-c577-4728-aa5e-4f2c1e9314ae?preview=true",
+      "guid": "39623c8c-1401-45e9-a803-382f9136eb26",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/7979994f-c577-4728-aa5e-4f2c1e9314ae/Jason_Lengstorf_tc.mp3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at sagittis felis. Quisque lacus sapien, consectetur quis nibh nec, dapibus euismod mi. Mauris vel luctus libero. Donec semper suscipit nibh eu mattis. Donec aliquet lacinia laoreet. Ut gravida hendrerit orci eu hendrerit. Nam vel tristique ex.",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=7979994f-c577-4728-aa5e-4f2c1e9314ae&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T12:45:07.197070-07:00",
+      "type": "full",
+      "token": "edf78b39",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "edf78b39",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-05-17T08:00:00.000000-07:00",
+      "number": 45,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/815fd97a-c688-43a0-89ec-adb51771d245/1558126643artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/815fd97a-c688-43a0-89ec-adb51771d245/1558126643artwork.jpg",
+      "id": "3abc",
+      "href": "https://api.simplecast.com/episodes/815fd97a-c688-43a0-89ec-adb51771d245?preview=true",
+      "guid": "471b8cf9-bd58-425a-9809-823c37e24389",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/815fd97a-c688-43a0-89ec-adb51771d245/edf78b39_tc.mp3",
+      "description": "Today we are joined by Janelle Allen, a learning designer, who talks to us about backward design, how she grew into her role, the increase in quality of online courses, the importance of contact with users, and how to grow your audience. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=815fd97a-c688-43a0-89ec-adb51771d245&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:00:33.648782-07:00",
+      "type": "full",
+      "token": "b14002cc",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "b14002cc",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-05-13T18:59:00.000000-07:00",
+      "number": 44,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/831dd452-0017-431f-a6aa-e67f656bcbb5/1557799504artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/831dd452-0017-431f-a6aa-e67f656bcbb5/1557799504artwork.jpg",
+      "id": "4abc",
+      "href": "https://api.simplecast.com/episodes/831dd452-0017-431f-a6aa-e67f656bcbb5?preview=true",
+      "guid": "38e0bb24-2c80-4448-8435-585ef9b87e97",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/831dd452-0017-431f-a6aa-e67f656bcbb5/b14002cc_tc.mp3",
+      "description": "Jen Looper, the founder of Vue Vixens, joins us today to talk about the Vue Vixens community, what makes a great workshop, how she chooses what tools to invest into for her career, and how her Ph.D. in French Literature has empowered her career in software development. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=831dd452-0017-431f-a6aa-e67f656bcbb5&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:01:22.454517-07:00",
+      "type": "full",
+      "token": "e855d7bc",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "e855d7bc",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-05-03T08:00:00.000000-07:00",
+      "number": 43,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/27992848-007f-4c0e-b0b6-74518b758f7e/1556842744artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/27992848-007f-4c0e-b0b6-74518b758f7e/1556842744artwork.jpg",
+      "id": "5abc",
+      "href": "https://api.simplecast.com/episodes/27992848-007f-4c0e-b0b6-74518b758f7e?preview=true",
+      "guid": "b61428c6-2974-4deb-a74f-6c22a9c2991f",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/27992848-007f-4c0e-b0b6-74518b758f7e/e855d7bc_tc.mp3",
+      "description": "Today Maggie Appleton, the course illustrator at egghead.io, discusses how she became an illustrator, researching a technical topic she plans to illustrate,  accidentally becoming a web developer, and how she turns technical concepts into digestible illustrations.",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=27992848-007f-4c0e-b0b6-74518b758f7e&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:01:58.802141-07:00",
+      "type": "full",
+      "token": "49266475",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "49266475",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-04-29T16:19:00.000000-07:00",
+      "number": 42,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a593adfa-6bc5-4774-9fe9-cc5e34e6f2c4/1556580270artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a593adfa-6bc5-4774-9fe9-cc5e34e6f2c4/1556580270artwork.jpg",
+      "id": "6abc",
+      "href": "https://api.simplecast.com/episodes/a593adfa-6bc5-4774-9fe9-cc5e34e6f2c4?preview=true",
+      "guid": "5943566f-d1d5-48e1-9498-6972121ff6fd",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a593adfa-6bc5-4774-9fe9-cc5e34e6f2c4/49266475_tc.mp3",
+      "description": "Stacey Mulcahy joins us today to discuss Arduinos, cute dogs, growing your creativity, organizing a community, and facilitating the success of others. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=a593adfa-6bc5-4774-9fe9-cc5e34e6f2c4&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:02:32.475737-07:00",
+      "type": "full",
+      "token": "f01d7c04",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "f01d7c04",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-03-28T08:00:00.000000-07:00",
+      "number": 41,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/750d4286-a236-4635-b58f-c4ecf7d5a625/1553663199artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/750d4286-a236-4635-b58f-c4ecf7d5a625/1553663199artwork.jpg",
+      "id": "7abc",
+      "href": "https://api.simplecast.com/episodes/750d4286-a236-4635-b58f-c4ecf7d5a625?preview=true",
+      "guid": "c4e86cb4-dbde-4f01-b82c-6854616c6dbd",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/750d4286-a236-4635-b58f-c4ecf7d5a625/f01d7c04_tc.mp3",
+      "description": "Today we are joined by Emma Wedekind who will speak about self-teaching, creating authentic content, what being a T-shaped developer means, how to ask good questions, and how she manages her work-life balance. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=750d4286-a236-4635-b58f-c4ecf7d5a625&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:06:19.502473-07:00",
+      "type": "full",
+      "token": "7c3086d2",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "7c3086d2",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-03-15T08:00:00.000000-07:00",
+      "number": 40,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/8daa13e5-1ffe-4cdd-8054-d3a26ef196a9/1552608117artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/8daa13e5-1ffe-4cdd-8054-d3a26ef196a9/1552608117artwork.jpg",
+      "id": "8abc",
+      "href": "https://api.simplecast.com/episodes/8daa13e5-1ffe-4cdd-8054-d3a26ef196a9?preview=true",
+      "guid": "ae915558-edeb-45cc-9182-95f05a4f79c5",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/8daa13e5-1ffe-4cdd-8054-d3a26ef196a9/7c3086d2_tc.mp3",
+      "description": "Marcy Sutton is the Head of Learning at GatsbyJS. She discusses the van life, migrating her blog from Wordpress to Gatsby, what she does as the Head of Learning, the potential that Gatsby has as a platform, championing accessibility, static CSS versus inline CSS, how JavaScript is impacting roles and careers, and creating inclusive communities. \r\n",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=8daa13e5-1ffe-4cdd-8054-d3a26ef196a9&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:07:54.016789-07:00",
+      "type": "full",
+      "token": "a63f7af2",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "a63f7af2",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-03-12T13:07:00.000000-07:00",
+      "number": 39,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a7643d5a-69df-46b4-a484-28ca9b7d3909/1552423642artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a7643d5a-69df-46b4-a484-28ca9b7d3909/1552423642artwork.jpg",
+      "id": "9abc",
+      "href": "https://api.simplecast.com/episodes/a7643d5a-69df-46b4-a484-28ca9b7d3909?preview=true",
+      "guid": "39b005ca-651e-4aab-a72f-516751393f14",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/a7643d5a-69df-46b4-a484-28ca9b7d3909/a63f7af2_tc.mp3",
+      "description": "Today we are joined by Sara Vieira, a developer advocate and maker of wacky stuff on the internet. She joins us today to talk about why she makes all of her weird experiments, how being a lazy developer doesn't mean she isn't doing work, the Redux cargo cult, why you shouldn't always use GraphQL, her meetups and upcoming conference for woman speakers, and of course making people smile. ",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=a7643d5a-69df-46b4-a484-28ca9b7d3909&preview=true"
+      }
+    },
+    {
+      "updated_at": "2019-06-12T13:10:19.641666-07:00",
+      "type": "full",
+      "token": "2ed84114",
+      "title": "Podcast Episode Title",
+      "status": "published",
+      "slug": "2ed84114",
+      "season": {
+        "href": "https://api.simplecast.com/seasons/37157954-19df-4d38-9087-6fe015020f77",
+        "number": 1
+      },
+      "scheduled_for": null,
+      "published_at": "2019-02-22T08:00:00.000000-08:00",
+      "number": 38,
+      "is_hidden": false,
+      "image_url": "https://cdn.simplecast.com/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/5a4528b4-dbfe-49b2-b521-11dda68ade41/1550274493artwork.jpg",
+      "image_path": "/images/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/5a4528b4-dbfe-49b2-b521-11dda68ade41/1550274493artwork.jpg",
+      "id": "10abc",
+      "href": "https://api.simplecast.com/episodes/5a4528b4-dbfe-49b2-b521-11dda68ade41?preview=true",
+      "guid": "7af69667-0b99-46b6-8ae5-b4abdfcf9a34",
+      "enclosure_url": "https://dts.podtrac.com/redirect.mp3/cdn.simplecast.com/audio/2ac34c/2ac34cab-4949-40aa-bac7-d7e3a70f0a39/5a4528b4-dbfe-49b2-b521-11dda68ade41/2ed84114_tc.mp3",
+      "description": "Joel and Ali Spittel discuss her time in a teaching position, code challenges, blogging platforms, teaching beginners, and getting involved in local dev communities.",
+      "analytics": {
+        "href": "https://api.simplecast.com/analytics/downloads?episode=5a4528b4-dbfe-49b2-b521-11dda68ade41&preview=true"
+      }
+    }
+  ],
+  "average_duration": 1994.26
+}
