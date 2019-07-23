@@ -1,7 +1,8 @@
 const theme = {
   useCustomProperties: true,
   initialColorMode: "dark",
-  breakpoints: ["540px", "768px", "992px", "1200px", "1920px"],
+  //breakpoints: ["540px", "768px", "992px", "1200px", "1920px"],
+  breakpoints: ["992px", "1200px", "1920px"],
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 40, 48, 64],
@@ -43,7 +44,9 @@ const theme = {
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      height: 400,
+      height: ["100%", 400],
+      minHeight: 300,
+      maxHeight: 400,
       justifyContent: "flex-end",
       color: "text",
       "h1, h5": { m: 0 },
@@ -53,7 +56,7 @@ const theme = {
         position: "absolute",
         pb: 8,
         px: 8,
-        zIndex: 999,
+        zIndex: 1,
         display: "flex",
         alignItems: "flex-start",
         button: {
@@ -83,6 +86,7 @@ const theme = {
       backgroundColor: "background",
       lineHeight: "body",
       fontFamily: "body",
+      fontSize: [2, 3],
       color: "text",
       bg: "background",
       a: {
@@ -91,9 +95,19 @@ const theme = {
       "a:hover": {
         color: "primary-lighten-70",
       },
+      article: {
+        p: [5, 8],
+        pb: [2, 14],
+        borderLeft: "2px solid",
+        borderRight: "2px solid",
+        borderColor: "background-lighten-10",
+      },
       nav: {
+        backgroundColor: "background",
+        position: ["absolute", "static"],
+        zIndex: 2,
         width: "100%",
-        maxWidth: 300,
+        maxWidth: [375, 300],
         px: 5,
         pt: 40,
         a: {
@@ -101,14 +115,6 @@ const theme = {
           color: "text",
           fontSize: 3,
           fontWeight: "heading",
-        },
-
-        h5: {
-          textTransform: "uppercase",
-          mt: 2,
-          fontWeight: 400,
-          fontSize: 0,
-          opacity: 0.6,
         },
         li: {
           py: 0,

@@ -12,11 +12,12 @@ function Layout({ children }) {
         sx={{
           p: 0,
           display: "flex",
+          flexDirection: ["column", "row"],
           flexGrow: "1",
         }}
       >
-        <List />
-        <main sx={{ width: "100%", ml: 5 }}>{children}</main>
+        <List eventTypes="click" />
+        <main sx={{ width: "100%", ml: [0, 0, 0, 5] }}>{children}</main>
       </Container>
     </Wrapper>
   )

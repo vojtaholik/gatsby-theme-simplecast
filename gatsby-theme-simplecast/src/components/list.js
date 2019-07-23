@@ -1,12 +1,19 @@
 /** @jsx jsx */
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { jsx } from "theme-ui"
-import Link from "./link"
+import { jsx, Flex } from "theme-ui"
 import { EpisodeConsumer } from "./context"
-import Bars from "./bars"
 import { FaPlay as PlayIcon } from "react-icons/fa"
+import { MdMenu as MenuIcon, MdClose as CloseMenuIcon } from "react-icons/md"
+import Link from "./link"
+import Bars from "./bars"
+import onClickOutside from "react-onclickoutside"
 
 function List() {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggleMenu = () => setIsOpen(!isOpen)
+  List.handleClickOutside = () => setIsOpen(false)
+
   const data = useStaticQuery(graphql`
     query listQuery {
       allEpisode {
@@ -38,50 +45,132 @@ function List() {
   return (
     <EpisodeConsumer>
       {context => (
-        <nav>
-          <div sx={{ ml: 6, pb: 4 }}>
-            <Link to="/">
-              <h1 sx={{ fontSize: 6, color: "primary", mb: 0 }}>
-                Podcast Name
-              </h1>
-            </Link>
-            <h5>season 01</h5>
-          </div>
-          <ul role="menu" sx={{ pb: 14 }}>
-            {data.allEpisode.nodes.map(episode => (
-              <li role="none" key={episode.id}>
-                {episode.id === context.state.id && <Bars />}
-                <Link
-                  role="menuitem"
-                  activeClassName="active"
-                  to={`/show/${episode.number}/${episode.fields.slug}`}
+        <>
+          <Flex
+            sx={{
+              p: 3,
+              display: ["flex", "none"],
+              visibility: ["visible", "hidden"],
+              width: "100%",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Flex
+              sx={{
+                flexDirection: "column",
+                justifyContent: "center",
+                a: { textDecoration: "none" },
+              }}
+            >
+              <Link to="/">
+                <h1
+                  className="logo"
+                  sx={{ fontSize: 6, color: "primary", mb: 0 }}
                 >
-                  <h4>{episode.title}</h4>
-                  {data.allMarkdownRemark.edges.map(({ node: markdown }) => {
-                    if (markdown.frontmatter.id === episode.id)
-                      return (
-                        <p key={markdown.id} className="summary">
-                          {markdown.frontmatter.summary}
-                        </p>
-                      )
-                    else return null
-                  })}
-                </Link>
-                {episode.id !== context.state.id && (
-                  <button
-                    tabIndex="-1"
-                    onClick={() => context.setCurrentPlaying(episode)}
+                  Podcast Name
+                </h1>
+              </Link>
+              <h5
+                sx={{
+                  textTransform: "uppercase",
+                  mt: 2,
+                  mb: 0,
+                  fontWeight: 400,
+                  fontSize: 0,
+                  opacity: 0.6,
+                }}
+              >
+                season 01
+              </h5>
+            </Flex>
+            <button
+              sx={{
+                position: "relative",
+                zIndex: 999,
+                display: "flex",
+
+                p: 3,
+                backgroundColor: "background",
+                color: "text",
+                borderColor: "background-lighten-20",
+                fontSize: 5,
+              }}
+              onClick={toggleMenu}
+              aria-controls="menu"
+              aria-haspopup="true"
+              aria-expanded={isOpen ? "true" : "false"}
+            >
+              {isOpen ? <CloseMenuIcon /> : <MenuIcon />}
+            </button>
+          </Flex>
+          <nav
+            sx={{
+              transform: [`translateX(${isOpen ? "0" : "-100%"})`, "none"],
+              transition: "300ms cubic-bezier(1, 0, 0, 1)",
+            }}
+          >
+            <div sx={{ ml: 6, pb: 4 }}>
+              <Link to="/">
+                <h1
+                  className="logo"
+                  sx={{ fontSize: 6, color: "primary", mb: 0 }}
+                >
+                  Podcast Name
+                </h1>
+              </Link>
+              <h5
+                sx={{
+                  textTransform: "uppercase",
+                  mt: 2,
+                  fontWeight: 400,
+                  fontSize: 0,
+                  opacity: 0.6,
+                }}
+              >
+                season 01
+              </h5>
+            </div>
+            <ul id="menu" role="menu" sx={{ pb: 14 }}>
+              {data.allEpisode.nodes.map(episode => (
+                <li role="none" key={episode.id}>
+                  {episode.id === context.state.id && <Bars />}
+                  <Link
+                    role="menuitem"
+                    activeClassName="active"
+                    to={`/show/${episode.number}/${episode.fields.slug}`}
                   >
-                    <PlayIcon />
-                  </button>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
+                    <h4>{episode.title}</h4>
+                    {data.allMarkdownRemark.edges.map(({ node: markdown }) => {
+                      if (markdown.frontmatter.id === episode.id)
+                        return (
+                          <p key={markdown.id} className="summary">
+                            {markdown.frontmatter.summary}
+                          </p>
+                        )
+                      else return null
+                    })}
+                  </Link>
+                  {episode.id !== context.state.id && (
+                    <button
+                      tabIndex="-1"
+                      onClick={() => context.setCurrentPlaying(episode)}
+                    >
+                      <PlayIcon />
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </>
       )}
     </EpisodeConsumer>
   )
 }
 
-export default List
+const clickOutsideConfig = {
+  handleClickOutside: () => List.handleClickOutside,
+}
+
+export default onClickOutside(List, clickOutsideConfig)

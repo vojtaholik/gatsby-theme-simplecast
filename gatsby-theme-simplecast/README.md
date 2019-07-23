@@ -34,8 +34,9 @@ module.exports = {
 ## Using markdown to provide episode details
 - `frontmatter.id` has to match episode id to show up. 
 
-`content/episodes/1/index.md`:
 ```js
+// content/episodes/1/index.md
+
 ---
 // required
 id: '123' // has to match episode id

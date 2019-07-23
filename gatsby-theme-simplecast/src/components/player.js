@@ -211,25 +211,33 @@ export default class Player extends React.Component {
     return (
       <div
         sx={{
+          zIndex: 10,
           position: "fixed",
           width: "100%",
           color: "text",
           borderTop: "2px solid",
           borderColor: "background-lighten-10",
           backgroundColor: "background",
-          height: 60,
+          height: ["auto", 60],
           bottom: 0,
           left: 0,
           display: "flex",
+
           alignItems: "center",
         }}
         className="player"
       >
-        <Container sx={{ display: "flex", alignItems: "center" }}>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: ["column", "row"],
+            alignItems: ["flex-start", "center"],
+          }}
+        >
           <div
             sx={{
               width: "100%",
-              maxWidth: 310,
+              maxWidth: ["100%", 310],
               display: "flex",
               alignItems: "center",
               "*": {
@@ -269,12 +277,13 @@ export default class Player extends React.Component {
                 ml: 4,
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "flex-end",
+                justifyContent: ["flex-start", "flex-end"],
                 width: "100%",
                 overflow: "hidden",
                 whiteSpace: "nowrap",
                 height: 60,
                 ".fade-out": {
+                  display: ["none", "block"],
                   position: "absolute",
                   zIndex: 999,
                   width: 40,
@@ -302,7 +311,7 @@ export default class Player extends React.Component {
 
           <div
             sx={{
-              ml: 7,
+              ml: [0, 7],
               width: "100%",
               display: "flex",
               alignItems: "center",
