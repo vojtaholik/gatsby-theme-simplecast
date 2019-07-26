@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from "react"
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 import Episode from "../templates/episode"
@@ -8,12 +9,14 @@ function Index({ data: { allEpisode, allMarkdownRemark } }) {
     Markdown => Markdown.node.frontmatter.id === allEpisode.nodes[0].id
   )
   return (
-    <Episode
-      data={{
-        episode: allEpisode.nodes[0],
-        markdownRemark: MarkdownForLatestEpisode[0].node,
-      }}
-    />
+    <>
+      <Episode
+        data={{
+          episode: allEpisode.nodes[0],
+          markdownRemark: MarkdownForLatestEpisode[0].node,
+        }}
+      />
+    </>
   )
 }
 export default Index
@@ -40,7 +43,6 @@ export const indexQuery = graphql`
           frontmatter {
             id
             title
-            slug
             resources
             guestSummary
             guestName

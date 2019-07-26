@@ -28,7 +28,6 @@ export const indexQuery = graphql`
           frontmatter {
             id
             title
-            slug
             resources
             guestSummary
             guestName

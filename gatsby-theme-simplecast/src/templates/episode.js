@@ -1,16 +1,11 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
-import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { EpisodeConsumer } from "../components/context"
-import { FaExternalLinkAlt as ExternalLinkIcon } from "react-icons/fa"
-import Link from "../components/link"
-import Markdown from "react-markdown"
-import itunesIcon from "../images/apple.svg"
-import spotifyImage from "../images/spotify.png"
-import Header from "../components/episodeHeader"
+import Header from "../components/header"
 import Aside from "../components/aside"
+import { SkipNavContent } from "@reach/skip-nav"
 
 function EpisodeTemplate({ data: { episode, markdownRemark } }) {
   const image = markdownRemark && markdownRemark.frontmatter.image
@@ -26,15 +21,17 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
               flexDirection: ["column", "row"],
             }}
           >
-            <div sx={{ maxWidth: ["100%", 710], width: "100%" }}>
-              <Header context={context} episode={episode} image={image} />
-              <article>
-                <p>{episode.description && episode.description}</p>
-                {markdown && (
-                  <div dangerouslySetInnerHTML={{ __html: markdown.html }} />
-                )}
-              </article>
-            </div>
+            <SkipNavContent>
+              <div sx={{ maxWidth: ["100%", 710], width: "100%" }}>
+                <Header context={context} episode={episode} image={image} />
+                <article>
+                  <p>{episode.description && episode.description}</p>
+                  {markdown && (
+                    <div dangerouslySetInnerHTML={{ __html: markdown.html }} />
+                  )}
+                </article>
+              </div>
+            </SkipNavContent>
             <Aside markdown={markdown} />
           </div>
         </>
@@ -63,7 +60,6 @@ export const episodeQuery = graphql`
         id
         title
         resources
-        slug
         guestName
         guestSummary
         guestPhoto {

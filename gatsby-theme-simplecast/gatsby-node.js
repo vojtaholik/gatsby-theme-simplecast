@@ -44,12 +44,6 @@ exports.sourceNodes = async (
   options.podcastId
     ? data.collection.map(packagePodcast)
     : mockupEpisodes.collection.map(packagePodcast)
-
-  // data.collection.map(packagePodcast)
-
-  // options.podcastId
-  //   ? data.collection.map(packagePodcast)
-  //   : mockupEpisodes.collection.map(packagePodcast)
 }
 
 exports.createPages = async ({ actions, graphql }) => {

@@ -1,9 +1,6 @@
 ---
-title: Podcast episode 3
-slug: podcast-episode-3
+id: c
 summary: 'Summary. Lorem ipsum dolor sit amet.'
-id: 3abc
-number: 45
 resources: ['[Badass: Making Users Awesome](https://www.goodreads.com/book/show/24737268-badass)',
 '[Shambhala: The Sacred Path of the Warrior](https://www.goodreads.com/book/show/336248.Shambhala)']
 guestName: 'Janelle Allen'
@@ -12,21 +9,8 @@ image: './banner.png'
 guestPhoto: null
 ---
 
-Teaching provides a learner with more information, but the information isn't the only thing that is required to teach effectively. Doing is almost just as essential as the information itself for the learner to solidify what was taught. Creating an effective learning path is challenging, and we tend to start from what we know and take it from there. Janelle challenges the tendency to start from our knowledge, and instead, we should start from where we want our learners to end up being and work backward from there, this is called *Backward Design*. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac semper est. Etiam sem leo, mattis ac rutrum nec, aliquet et augue. Aliquam semper id orci vel porta. Nunc eu arcu non nulla vulputate posuere. Curabitur tristique massa vitae orci tincidunt, nec cursus diam posuere. Etiam ac quam dolor. Praesent at sapien arcu. Suspendisse potenti.
 
-Backward design doesn't just apply to education, it applies directly to software development. As developers, it's essential that we get out of our head and start with the user. 
+Maecenas a augue vitae mauris interdum accumsan. Morbi auctor velit sed justo tempor, nec blandit purus iaculis. In hac habitasse platea dictumst. Ut in rutrum justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ullamcorper libero id sapien eleifend, et ornare lectus rhoncus. Donec tempor dapibus metus, quis ornare diam rhoncus eget. Ut molestie cursus ornare. Aenean iaculis eget enim congue vestibulum. Curabitur imperdiet nisi quis interdum auctor.
 
-How do you start teaching if you have no one to teach? Janelle says there are three critical components to building your audience, having an email list, providing valuable content, and consistency. If you stay genuine and provide value you'll filter out anyone who doesn't resonate with you and what you offer. 
-
----
-
-
-**Janelle Allen:**
-
-- [Twitter](https://twitter.com/janelleallen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)
-
-**Joel Hooks:**
-
-- [Twitter](https://twitter.com/jhooks)
-
-- [Website](https://joelhooks.com/)
+Vivamus semper consectetur purus, at blandit nibh congue vel. Phasellus rhoncus, leo et commodo tempus, quam metus commodo tellus, sit amet interdum sem leo id nisl. Cras a pretium mauris. Sed nec justo ultricies, tincidunt lorem eu, accumsan dolor. Pellentesque eu auctor nisi, non tincidunt ante. Quisque lacinia dictum risus, a dignissim ipsum malesuada in. Morbi tristique risus metus, at porta mauris fermentum id. Quisque sit amet tincidunt enim, a auctor est. Morbi condimentum vestibulum ex non varius.

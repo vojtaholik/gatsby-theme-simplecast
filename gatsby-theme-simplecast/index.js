@@ -22,23 +22,6 @@ export default Index
 
 export const indexQuery = graphql`
   query {
-    episode {
-      id
-      title
-      number
-      description
-      fields {
-        slug
-      }
-    }
-    markdownRemark {
-      html
-      frontmatter {
-        id
-        title
-        slug
-      }
-    }
     allEpisode {
       totalCount
       nodes {
@@ -59,7 +42,6 @@ export const indexQuery = graphql`
           frontmatter {
             id
             title
-            slug
             resources
             guestSummary
             guestName

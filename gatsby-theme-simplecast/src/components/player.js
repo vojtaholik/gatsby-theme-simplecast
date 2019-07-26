@@ -1,3 +1,5 @@
+// by Wes Bos, syntax.fm
+// https://github.com/wesbos/Syntax/blob/master/components/Player.js
 /** @jsx jsx */
 import React from "react"
 import PropTypes from "prop-types"
@@ -5,7 +7,8 @@ import { FaPlay, FaPause } from "react-icons/fa"
 import { jsx, Container } from "theme-ui"
 import { keyframes, css } from "@emotion/core"
 import formatTime from "../lib/formatTime"
-import VolumeBars from "./volumeBars"
+import VisuallyHidden from "@reach/visually-hidden"
+//import VolumeBars from "./volumeBars"
 
 export default class Player extends React.Component {
   static propTypes = {
@@ -216,7 +219,7 @@ export default class Player extends React.Component {
           width: "100%",
           color: "text",
           borderTop: "2px solid",
-          borderColor: "background-lighten-10",
+          borderColor: "backgroundLighten10",
           backgroundColor: "background",
           height: ["auto", 60],
           bottom: 0,
@@ -246,7 +249,7 @@ export default class Player extends React.Component {
             }}
           >
             <button
-              tabIndex="1"
+              tabIndex="0"
               sx={{
                 backgroundImage:
                   "linear-gradient(224deg, #B298FF 0%, #7A5EFF 100%)",
@@ -270,6 +273,7 @@ export default class Player extends React.Component {
               aria-label={playing ? "pause" : `play ${episode.title}`}
               type="button"
             >
+              <VisuallyHidden>{playing ? "Pause" : "Play"}</VisuallyHidden>{" "}
               {playing ? <FaPause /> : <FaPlay />}
             </button>
             <div
@@ -311,7 +315,7 @@ export default class Player extends React.Component {
 
           <div
             sx={{
-              ml: [0, 7],
+              ml: [0, 2],
               width: "100%",
               display: "flex",
               alignItems: "center",
@@ -330,8 +334,8 @@ export default class Player extends React.Component {
                 mx: 2,
                 height: 2,
                 flexGrow: "1",
-                maxWidth: 440,
-                backgroundColor: "background-lighten-20",
+                maxWidth: 460,
+                backgroundColor: "backgroundLighten20",
               }}
               className="progress"
               onClick={this.scrub}

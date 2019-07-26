@@ -87,13 +87,12 @@ function List() {
             <button
               sx={{
                 position: "relative",
-                zIndex: 999,
+                zIndex: 998,
                 display: "flex",
-
                 p: 3,
                 backgroundColor: "background",
                 color: "text",
-                borderColor: "background-lighten-20",
+                borderColor: "backgroundLighten20",
                 fontSize: 5,
               }}
               onClick={toggleMenu}
@@ -156,7 +155,7 @@ function List() {
                       tabIndex="-1"
                       onClick={() => context.setCurrentPlaying(episode)}
                     >
-                      <PlayIcon />
+                      <PlayIcon aria-hidden="true" />
                     </button>
                   )}
                 </li>

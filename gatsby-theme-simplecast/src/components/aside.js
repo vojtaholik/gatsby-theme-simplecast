@@ -10,19 +10,7 @@ import spotifyImage from "../images/spotify.png"
 
 function Aside({ markdown }) {
   return (
-    <aside
-      sx={{
-        display: "flex",
-        flexDirection: ["row", "column"],
-        p: [5, 8],
-        pb: [13, 8],
-        width: "100%",
-        maxWidth: ["100%", 250],
-        fontSize: "15px",
-        h5: { mt: 4, mb: 3, fontSize: 3 },
-        "h5:not(:first-of-type)": { mb: 10, mt: 0 },
-      }}
-    >
+    <aside>
       <div
         sx={{
           mb: 9,
@@ -39,7 +27,7 @@ function Aside({ markdown }) {
           }}
           to="/"
         >
-          <img src={spotifyImage} width="90" />
+          <img src={spotifyImage} alt="Spotify logo" width="90" />
         </Link>
         <Link
           sx={{
@@ -50,7 +38,7 @@ function Aside({ markdown }) {
           }}
           to="/"
         >
-          <img src={itunesIcon} />
+          <img src={itunesIcon} alt="Apple Podcasts" />
           Apple Podcasts
         </Link>
       </div>
@@ -73,6 +61,7 @@ function Aside({ markdown }) {
                     maxWidth: 100,
                   }}
                   fluid={markdown.frontmatter.guestPhoto.childImageSharp.fluid}
+                  alt={markdown.frontmatter.guestName}
                 />
               )}
               <h4 sx={{ mt: 3, mb: 1 }}>{markdown.frontmatter.guestName}</h4>
@@ -86,21 +75,7 @@ function Aside({ markdown }) {
           <h5>Resources</h5>
           <ul>
             {markdown.frontmatter.resources.map((resource, i) => (
-              <li
-                key={i}
-                sx={{
-                  display: "flex",
-                  a: { color: "text" },
-                  svg: {
-                    mt: 1,
-                    mr: 1,
-                    width: "100%",
-                    maxWidth: 3,
-                    color: "text",
-                    opacity: 0.5,
-                  },
-                }}
-              >
+              <li key={i}>
                 <ExternalLinkIcon />
                 <Markdown>{resource}</Markdown>
               </li>
