@@ -2,7 +2,7 @@
 id: b
 summary: 'Summary. Lorem ipsum dolor sit amet.'
 image: './banner.png'
-guestName: 'Anna Davis'
+guestName: 'Charlie Doe'
 guestSummary: 'Lorem ipsum dolor sit amet. [Twitter](/)'
 guestPhoto: './guest.png'
 ---

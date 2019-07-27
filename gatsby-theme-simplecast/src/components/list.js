@@ -16,6 +16,11 @@ function List() {
 
   const data = useStaticQuery(graphql`
     query listQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       allEpisode {
         totalCount
         nodes {
@@ -68,7 +73,9 @@ function List() {
                   className="logo"
                   sx={{ fontSize: 6, color: "primary", mb: 0 }}
                 >
-                  Podcast Name
+                  {data.site.siteMetadata.title
+                    ? data.site.siteMetadata.title
+                    : "Podcast Name"}
                 </h1>
               </Link>
               <h5
@@ -115,7 +122,9 @@ function List() {
                   className="logo"
                   sx={{ fontSize: 6, color: "primary", mb: 0 }}
                 >
-                  Podcast Name
+                  {data.site.siteMetadata.title
+                    ? data.site.siteMetadata.title
+                    : "Podcast Name"}
                 </h1>
               </Link>
               <h5
@@ -137,7 +146,8 @@ function List() {
                   <Link
                     role="menuitem"
                     activeClassName="active"
-                    to={`/show/${episode.number}/${episode.fields.slug}`}
+                    //to={`/show/${episode.number}/${episode.fields.slug}`}
+                    to={episode.fields.slug}
                   >
                     <h4>{episode.title}</h4>
                     {data.allMarkdownRemark.edges.map(({ node: markdown }) => {

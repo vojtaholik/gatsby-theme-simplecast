@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 import { EpisodeConsumer } from "../components/context"
@@ -14,15 +13,15 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
   return (
     <EpisodeConsumer>
       {context => (
-        <>
+        <div>
           <div
             sx={{
               display: "flex",
               flexDirection: ["column", "row"],
             }}
           >
-            <SkipNavContent>
-              <div sx={{ maxWidth: ["100%", 710], width: "100%" }}>
+            <SkipNavContent sx={{ width: "100%" }}>
+              <div sx={{ maxWidth: ["100%", 710] }}>
                 <Header context={context} episode={episode} image={image} />
                 <article>
                   <p>{episode.description && episode.description}</p>
@@ -34,7 +33,7 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
             </SkipNavContent>
             <Aside markdown={markdown} />
           </div>
-        </>
+        </div>
       )}
     </EpisodeConsumer>
   )

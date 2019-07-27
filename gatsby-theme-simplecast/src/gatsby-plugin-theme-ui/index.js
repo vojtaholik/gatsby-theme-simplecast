@@ -1,4 +1,4 @@
-const theme = {
+export default {
   useCustomProperties: true,
   initialColorMode: "dark",
   breakpoints: ["992px", "1200px", "1920px"],
@@ -133,6 +133,12 @@ const theme = {
         fontSize: "15px",
         h5: { mt: 4, mb: 3, fontSize: 3 },
         "h5:not(:first-of-type)": { mb: 10, mt: 0 },
+        ".guest": {
+          fontSize: 1,
+          textTransform: "uppercase",
+          opacity: 0.8,
+          fontWeight: "body",
+        },
         li: {
           display: "flex",
           a: { color: "text" },
@@ -239,5 +245,3 @@ const theme = {
     },
   },
 }
-
-export default theme

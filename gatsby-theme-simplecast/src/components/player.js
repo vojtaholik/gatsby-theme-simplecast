@@ -5,10 +5,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FaPlay, FaPause } from "react-icons/fa"
 import { jsx, Container } from "theme-ui"
-import { keyframes, css } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 import formatTime from "../lib/formatTime"
 import VisuallyHidden from "@reach/visually-hidden"
-//import VolumeBars from "./volumeBars"
+// import VolumeBars from "./volumeBars"
 
 export default class Player extends React.Component {
   static propTypes = {
@@ -20,19 +20,19 @@ export default class Player extends React.Component {
 
     let lastPlayed = 0
     let lastVolumePref = 1
-    let lastPlaybackRate = 1
+    // let lastPlaybackRate = 1
 
     // for Server Side Rendering
     if (typeof window !== "undefined") {
       const { episode } = this.props
       const lp = localStorage.getItem(`lastPlayed${episode.number}`)
       const lastVolume = localStorage.getItem(`lastVolumeSetting`)
-      const lastPlayback = localStorage.getItem(`lastPlaybackSetting`)
+      // const lastPlayback = localStorage.getItem(`lastPlaybackSetting`)
 
       if (lp) lastPlayed = JSON.parse(lp).lastPlayed
       if (lastVolume) lastVolumePref = JSON.parse(lastVolume).lastVolumePref
-      if (lastPlayback)
-        lastPlaybackRate = JSON.parse(lastPlayback).lastPlaybackRate
+      // if (lastPlayback)
+      //   lastPlaybackRate = JSON.parse(lastPlayback).lastPlaybackRate
     }
 
     this.state = {
@@ -41,7 +41,7 @@ export default class Player extends React.Component {
       duration: 0,
       currentTime: lastPlayed,
       currentVolume: lastVolumePref,
-      playbackRate: lastPlaybackRate,
+      // playbackRate: lastPlaybackRate,
       timeWasLoaded: lastPlayed !== 0,
       showTooltip: false,
       tooltipPosition: 0,
@@ -50,29 +50,33 @@ export default class Player extends React.Component {
   } // END Constructor
 
   componentWillUpdate(nextProps, nextState) {
-    this.audio.playbackRate = nextState.playbackRate
+    // this.audio.playbackRate = nextState.playbackRate
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { episode } = this.props
-    const { currentTime, currentVolume, playbackRate } = this.state
+    const {
+      currentTime,
+      currentVolume,
+      // playbackRate
+    } = this.state
     if (episode.number !== prevProps.episode.number) {
       const lp = localStorage.getItem(`lastPlayed${episode.number}`)
       if (lp) {
         const lastVolume = localStorage.getItem(`lastVolumeSetting`)
-        const lastPlayback = localStorage.getItem(`lastPlaybackSetting`)
+        // const lastPlayback = localStorage.getItem(`lastPlaybackSetting`)
         const data = JSON.parse(lp)
         const data2 = JSON.parse(lastVolume)
-        const data3 = JSON.parse(lastPlayback)
+        // const data3 = JSON.parse(lastPlayback)
 
         this.setState({
           currentTime: data.lastPlayed,
           currentVolume: data2.lastVolumePref,
-          playbackRate: data3.lastPlaybackRate,
+          // playbackRate: data3.lastPlaybackRate,
         })
         this.audio.currentTime = data.lastPlayed
         this.audio.volume = data2.lastVolumePref
-        this.audio.playbackRate = data3.lastPlaybackRate
+        // this.audio.playbackRate = data3.lastPlaybackRate
       }
       this.audio.play()
     } else {
@@ -84,10 +88,10 @@ export default class Player extends React.Component {
         `lastVolumeSetting`,
         JSON.stringify({ lastVolumePref: currentVolume })
       )
-      localStorage.setItem(
-        `lastPlaybackSetting`,
-        JSON.stringify({ lastPlaybackRate: playbackRate })
-      )
+      // localStorage.setItem(
+      //   `lastPlaybackSetting`,
+      //   JSON.stringify({ lastPlaybackRate: playbackRate })
+      // )
     }
   }
 
@@ -172,28 +176,28 @@ export default class Player extends React.Component {
     this.speed(-0.25)
   }
 
-  speed = change => {
-    const playbackRateMax = 2.5
-    const playbackRateMin = 0.75
+  // speed = change => {
+  //   const playbackRateMax = 2.5
+  //   const playbackRateMin = 0.75
 
-    let playbackRate = this.state.playbackRate + change
+  //   let playbackRate = this.state.playbackRate + change
 
-    if (playbackRate > playbackRateMax) {
-      playbackRate = playbackRateMin
-    }
+  //   if (playbackRate > playbackRateMax) {
+  //     playbackRate = playbackRateMin
+  //   }
 
-    if (playbackRate < playbackRateMin) {
-      playbackRate = playbackRateMax
-    }
+  //   if (playbackRate < playbackRateMin) {
+  //     playbackRate = playbackRateMax
+  //   }
 
-    this.setState({ playbackRate })
-  }
+  //   this.setState({ playbackRate })
+  // }
 
   render() {
     const { episode } = this.props
     const {
       playing,
-      playbackRate,
+      // playbackRate,
       progressTime,
       currentTime,
       duration,

@@ -46,9 +46,14 @@ exports.sourceNodes = async (
     : mockupEpisodes.collection.map(packagePodcast)
 }
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }, options) => {
   const { data } = await graphql(`
-    query {
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       allEpisode {
         edges {
           node {
@@ -72,9 +77,11 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  data.allEpisode.edges.forEach(({ node }) => {
+  data.allEpisode.edges.forEach(({ node }, options) => {
     actions.createPage({
-      path: `show/${node.number}/${slugify(node.title)}`,
+      path: `${options.episodeSlug ? options.episodeSlug : "show"}/${
+        node.number
+      }/${slugify(node.title)}`,
       component: require.resolve(`./src/templates/episode.js`),
       context: {
         slug: slugify(node.title),
@@ -85,11 +92,16 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }, options) => {
   const { createNodeField } = actions
+  const showsSlug = options.episodeSlug ? options.episodeSlug : "show"
   createNodeField({
     name: "slug",
     node,
-    value: slugify(`${node.title}`),
+    //value: slugify(`${node.title}`),
+    value: "/" + showsSlug + "/" + node.number + "/" + slugify(`${node.title}`),
+    // value: `${options.episodeSlug ? options.episodeSlug : "show"}/${
+    //   node.number
+    // }/${slugify(node.title)}`,
   })
 }

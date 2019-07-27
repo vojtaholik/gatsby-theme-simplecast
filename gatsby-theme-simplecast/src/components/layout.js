@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import PropTypes from "prop-types"
 import List from "./list"
 import "./layout.css"

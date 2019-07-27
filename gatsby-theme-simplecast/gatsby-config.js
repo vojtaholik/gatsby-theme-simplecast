@@ -1,8 +1,8 @@
 module.exports = ({ markdownPath = `${__dirname}/content/episodes` }) => ({
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Podcast Name`,
+    description: `Podcast description.`,
+    author: `@vojtaholik`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,13 +27,13 @@ module.exports = ({ markdownPath = `${__dirname}/content/episodes` }) => ({
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-theme-simplecast`,
+        short_name: `simplecast`,
         start_url: `/`,
         background_color: `#A085FF`,
         theme_color: `#A085FF`,
         display: `minimal-ui`,
-        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

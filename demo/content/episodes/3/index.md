@@ -3,10 +3,10 @@ id: c
 summary: 'Summary. Lorem ipsum dolor sit amet.'
 resources: ['[Badass: Making Users Awesome](https://www.goodreads.com/book/show/24737268-badass)',
 '[Shambhala: The Sacred Path of the Warrior](https://www.goodreads.com/book/show/336248.Shambhala)']
-guestName: 'Janelle Allen'
+guestName: 'Robert Doe'
 guestSummary: '[Twitter](https://twitter.com/janelleallen?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor)'
+guestPhoto: './guest.png'
 image: './banner.png'
-guestPhoto: null
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac semper est. Etiam sem leo, mattis ac rutrum nec, aliquet et augue. Aliquam semper id orci vel porta. Nunc eu arcu non nulla vulputate posuere. Curabitur tristique massa vitae orci tincidunt, nec cursus diam posuere. Etiam ac quam dolor. Praesent at sapien arcu. Suspendisse potenti.

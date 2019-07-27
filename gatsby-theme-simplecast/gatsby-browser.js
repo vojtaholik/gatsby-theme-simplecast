@@ -6,16 +6,20 @@ import { ThemeProvider, Styled } from "theme-ui"
 import theme from "./src/gatsby-plugin-theme-ui/index"
 import { SkipNavLink } from "@reach/skip-nav"
 
-export const wrapPageElement = ({ element, props }) => {
+export const wrapPageElement = ({ element, props }, options) => {
+  const episodeSlug = options.episodeSlug ? options.episodeSlug : "show"
   return (
     <ThemeProvider theme={theme}>
       <EpisodeProvider>
         <Styled.root>
           <SkipNavLink />
           <Layout {...props}>
-            <EpisodeConsumer>
-              {context => <Player episode={context.state} />}
-            </EpisodeConsumer>
+            {props.location.pathname.includes(episodeSlug) ||
+            props.location.pathname === "/" ? (
+              <EpisodeConsumer>
+                {context => <Player episode={context.state} />}
+              </EpisodeConsumer>
+            ) : null}
             {element}
           </Layout>
         </Styled.root>

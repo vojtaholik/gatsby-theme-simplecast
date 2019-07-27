@@ -2,7 +2,7 @@
 id: a
 summary: 'Summary. Lorem ipsum dolor sit amet.'
 resources: ['[Link](/)','[Link](/)','[Link](/)']
-guestName: 'Anna Davis'
+guestName: 'Anna Doe'
 guestSummary: '[Twitter](/)'
 image: null
 guestPhoto: ./guest.png

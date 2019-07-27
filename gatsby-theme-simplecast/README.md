@@ -26,15 +26,16 @@ To use this theme in your Gatsby sites, follow these instructions:
   ],
 }
   ```
-1. Configure
+Plugin options
    - `simplecastApiSecret`: Grab [your Simplecast API token here](https://dashboard.simplecast.com/account/private-apps).
    - `podcastId`: Podcast ID can be found in your Simplecast account under embeds settings.
    - `markdownPath`: Path to your markdown files. For markdown file to show up, it's `frontmatter.id` must match `episode.id`.
+   - `episodeSlug`: default "show". (`/show/05/episode-title`)
 
-2. Create index page in `src/pages/index.js` 
-   - Use [this demo](https://github.com/vojtaholik/gatsby-theme-simplecast/blob/master/demo/src/pages/index.js) to display latest episode on index page.
+3. Create index page in `src/pages/index.js` 
+   - You can use [this example](https://github.com/vojtaholik/gatsby-theme-simplecast/blob/master/demo/src/pages/index.js) which displays latest episode by default.
 
-3. Start your site
+4. Start your site
    ```
    gatsby develop
    ```

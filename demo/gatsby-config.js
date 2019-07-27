@@ -4,14 +4,15 @@ require('dotenv').config({
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-theme-ui`,
     {
       resolve: '@vojtaholik/gatsby-theme-simplecast',
       options: {
         simplecastApiSecret: process.env.SIMPLECAST_API_SECRET,
         //podcastId: process.env.PODCAST_ID,
         markdownPath: 'content/episodes',
+        episodeSlug: 'show',
       },
     },
+    `gatsby-plugin-theme-ui`,
   ],
 }

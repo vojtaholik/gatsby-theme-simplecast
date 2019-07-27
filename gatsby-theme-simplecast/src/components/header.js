@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx, useThemeUI, Header as ThemedHeader, Box } from "theme-ui"
 import Img from "gatsby-image"
 import { FaPlay as PlayIcon } from "react-icons/fa"

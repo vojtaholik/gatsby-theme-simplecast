@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import Img from "gatsby-image"
 import { FaExternalLinkAlt as ExternalLinkIcon } from "react-icons/fa"
@@ -42,9 +41,8 @@ function Aside({ markdown }) {
           Apple Podcasts
         </Link>
       </div>
-      {/* TODO: Separate into a component/s */}
       {markdown && (
-        <>
+        <div>
           {markdown.frontmatter.guestName && (
             <div
               sx={{
@@ -52,7 +50,7 @@ function Aside({ markdown }) {
                 flexDirection: "column",
               }}
             >
-              <h5>Guest</h5>
+              <h5 className="guest">Guest</h5>
               {markdown.frontmatter.guestPhoto && (
                 <Img
                   sx={{
@@ -68,10 +66,10 @@ function Aside({ markdown }) {
               <Markdown>{markdown.frontmatter.guestSummary}</Markdown>
             </div>
           )}
-        </>
+        </div>
       )}
       {markdown && markdown.frontmatter.resources && (
-        <>
+        <div>
           <h5>Resources</h5>
           <ul>
             {markdown.frontmatter.resources.map((resource, i) => (
@@ -81,7 +79,7 @@ function Aside({ markdown }) {
               </li>
             ))}
           </ul>
-        </>
+        </div>
       )}
     </aside>
   )
