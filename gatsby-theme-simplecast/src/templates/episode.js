@@ -20,16 +20,14 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
               flexDirection: ["column", "row"],
             }}
           >
-            <SkipNavContent sx={{ width: "100%" }}>
-              <div sx={{ maxWidth: ["100%", 710] }}>
-                <Header context={context} episode={episode} image={image} />
-                <article>
-                  <p>{episode.description && episode.description}</p>
-                  {markdown && (
-                    <div dangerouslySetInnerHTML={{ __html: markdown.html }} />
-                  )}
-                </article>
-              </div>
+            <SkipNavContent sx={{ maxWidth: ["100%", 710] }}>
+              <Header context={context} episode={episode} image={image} />
+              <article>
+                <p>{episode.description && episode.description}</p>
+                {markdown && (
+                  <div dangerouslySetInnerHTML={{ __html: markdown.html }} />
+                )}
+              </article>
             </SkipNavContent>
             <Aside markdown={markdown} />
           </div>
@@ -64,14 +62,14 @@ export const episodeQuery = graphql`
         guestPhoto {
           childImageSharp {
             fluid(maxWidth: 200) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid
             }
           }
         }
         image {
           childImageSharp {
             fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_noBase64
+              ...GatsbyImageSharpFluid
             }
           }
         }

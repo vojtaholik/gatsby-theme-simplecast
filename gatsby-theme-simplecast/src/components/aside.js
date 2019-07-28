@@ -2,44 +2,49 @@
 import { jsx } from "theme-ui"
 import Img from "gatsby-image"
 import { FaExternalLinkAlt as ExternalLinkIcon } from "react-icons/fa"
+import config from "../lib/config"
+import { css } from "@emotion/core"
+import styled from "@emotion/styled"
 import Link from "./link"
 import Markdown from "react-markdown"
 import itunesIcon from "../images/apple.svg"
 import spotifyImage from "../images/spotify.png"
+import googleImage from "../images/google.svg"
+
+const PodcastProvider = styled(Link)(
+  css({
+    mb: 5,
+    display: "flex",
+    alignItems: "center",
+    img: { m: 0, mr: 3 },
+  })
+)
 
 function Aside({ markdown }) {
   return (
     <aside>
       <div
         sx={{
-          mb: 9,
+          mb: 2,
           pr: [10, 0],
           a: { color: "text", textDecoration: "none" },
         }}
       >
-        <Link
-          sx={{
-            mb: 5,
-            display: "flex",
-            alignItems: "center",
-            img: { m: 0, mr: 3 },
-          }}
-          to="/"
-        >
-          <img src={spotifyImage} alt="Spotify logo" width="90" />
-        </Link>
-        <Link
-          sx={{
-            mb: 5,
-            display: "flex",
-            alignItems: "center",
-            img: { m: 0, mr: 2 },
-          }}
-          to="/"
-        >
-          <img src={itunesIcon} alt="Apple Podcasts" />
-          Apple Podcasts
-        </Link>
+        {config.spotifyUrl && (
+          <PodcastProvider to={config.spotifyUrl}>
+            <img src={spotifyImage} alt="Spotify logo" width="90" />
+          </PodcastProvider>
+        )}
+        {config.applePodcastsUrl && (
+          <PodcastProvider to={config.applePodcastsUrl}>
+            <img src={itunesIcon} alt="Apple Podcasts" />
+          </PodcastProvider>
+        )}
+        {config.googlePodcastsUrl && (
+          <PodcastProvider to={config.googlePodcastsUrl}>
+            <img src={googleImage} alt="Google Podcasts" />
+          </PodcastProvider>
+        )}
       </div>
       {markdown && (
         <div>
@@ -54,7 +59,7 @@ function Aside({ markdown }) {
               {markdown.frontmatter.guestPhoto && (
                 <Img
                   sx={{
-                    borderRadius: 1,
+                    borderRadius: 0,
                     width: "100%",
                     maxWidth: 100,
                   }}

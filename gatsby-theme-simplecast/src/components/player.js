@@ -239,6 +239,8 @@ export default class Player extends React.Component {
             display: "flex",
             flexDirection: ["column", "row"],
             alignItems: ["flex-start", "center"],
+            pb: [2, "inherit"],
+            pt: [0, "inherit"],
           }}
         >
           <div
@@ -325,7 +327,7 @@ export default class Player extends React.Component {
               alignItems: "center",
               span: {
                 fontVariantNumeric: "tabular-nums",
-                width: 50,
+                width: ["auto", 50],
                 fontSize: 1,
                 textAlign: "center",
                 opacity: 0.6,
@@ -336,8 +338,9 @@ export default class Player extends React.Component {
             <div
               sx={{
                 mx: 2,
-                height: 2,
+                height: [4, 2],
                 flexGrow: "1",
+                borderRadius: ["3px", "0px"],
                 maxWidth: 460,
                 backgroundColor: "backgroundLighten20",
               }}

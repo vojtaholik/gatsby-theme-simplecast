@@ -9,13 +9,13 @@ import Link from "./link"
 import Bars from "./bars"
 import onClickOutside from "react-onclickoutside"
 
-function List() {
+function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
   const toggleMenu = () => setIsOpen(!isOpen)
-  List.handleClickOutside = () => setIsOpen(false)
+  Navigation.handleClickOutside = () => setIsOpen(false)
 
   const data = useStaticQuery(graphql`
-    query listQuery {
+    query navQuery {
       site {
         siteMetadata {
           title
@@ -179,7 +179,7 @@ function List() {
 }
 
 const clickOutsideConfig = {
-  handleClickOutside: () => List.handleClickOutside,
+  handleClickOutside: () => Navigation.handleClickOutside,
 }
 
-export default onClickOutside(List, clickOutsideConfig)
+export default onClickOutside(Navigation, clickOutsideConfig)

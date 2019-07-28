@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import PropTypes from "prop-types"
-import List from "./list"
+import Navigation from "./navigation"
 import "./layout.css"
 import { jsx, Layout as Wrapper, Container } from "theme-ui"
 
@@ -15,7 +15,7 @@ function Layout({ children }) {
           flexGrow: "1",
         }}
       >
-        <List eventTypes="click" />
+        <Navigation eventTypes="click" />
         <main sx={{ width: "100%", ml: [0, 0, 0, 5] }}>{children}</main>
       </Container>
     </Wrapper>

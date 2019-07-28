@@ -1,3 +1,5 @@
+import config from "../lib/config"
+
 export default {
   useCustomProperties: true,
   initialColorMode: "dark",
@@ -44,21 +46,24 @@ export default {
       display: "flex",
       flexDirection: "column",
       width: "100%",
-      height: ["100%", 400],
-      minHeight: 300,
-      maxHeight: 400,
-      justifyContent: "flex-end",
+      //height: ["100%", 400],
+      height: config.headerImageHeight,
+      // maxHeight: 400,
+      //justifyContent: "flex-end",
       color: "text",
+      h1: { fontSize: [6, 8], textShadow: "0 2px 5px rgba(0,0,0,0.2)" },
       "h1, h5": { m: 0 },
       h5: { mt: 1, fontSize: 1, opacity: 0.6 },
-      ".content": {
+      ".header_content": {
         width: "100%",
+        height: "100%",
         position: "absolute",
-        pb: 8,
-        px: 8,
+        //pb: [5, 8],
+        px: [5, 8],
         zIndex: 1,
         display: "flex",
         alignItems: "flex-start",
+        justifyContent: "flex-end",
         button: {
           width: "100%",
           maxWidth: 7,
@@ -125,13 +130,13 @@ export default {
       },
       aside: {
         display: "flex",
-        flexDirection: ["row", "column"],
+        flexDirection: "column",
         p: [5, 8],
         pb: [13, 8],
         width: "100%",
         maxWidth: ["100%", 250],
         fontSize: "15px",
-        h5: { mt: 4, mb: 3, fontSize: 3 },
+        h5: { my: 4, fontSize: 3 },
         "h5:not(:first-of-type)": { mb: 10, mt: 0 },
         ".guest": {
           fontSize: 1,
@@ -139,7 +144,9 @@ export default {
           opacity: 0.8,
           fontWeight: "body",
         },
+
         li: {
+          mb: 2,
           display: "flex",
           a: { color: "text" },
           svg: {

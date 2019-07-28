@@ -2,6 +2,7 @@
 id: d
 summary: 'Summary. Lorem ipsum dolor sit amet.'
 image: './banner.png'
+resources: ['[Link](/)', '[Link](/)', '[Link](/)']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel volutpat nulla, vitae egestas dui. Donec sodales eros id purus gravida, quis egestas lorem mollis. Morbi sapien velit, finibus eget dapibus eget, auctor a justo. Etiam cursus congue luctus. Nam dui dolor, convallis vel hendrerit fringilla, interdum vitae odio. Vivamus at interdum nunc, sed cursus magna. Praesent malesuada hendrerit magna nec euismod. Curabitur placerat pellentesque tincidunt.
