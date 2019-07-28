@@ -2,7 +2,7 @@
   "name": "@vojtaholik/gatsby-theme-simplecast",
   "main": "index.js",
   "description": "Simplecast gatsby theme.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Vojta Holik <vojta@egghead.io>",
   "dependencies": {
     "@emotion/core": "^10.0.14",

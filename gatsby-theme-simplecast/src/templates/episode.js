@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 import { EpisodeConsumer } from "../components/context"
+import SEO from "../components/seo"
 import Header from "../components/header"
 import Aside from "../components/aside"
 import { SkipNavContent } from "@reach/skip-nav"
@@ -14,6 +15,11 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
     <EpisodeConsumer>
       {context => (
         <div>
+          <SEO
+            title={episode.title && episode.title}
+            image={image && image.childImageSharp.original.src}
+            description={episode.description && episode.description}
+          />
           <div
             sx={{
               display: "flex",
@@ -68,6 +74,9 @@ export const episodeQuery = graphql`
         }
         image {
           childImageSharp {
+            original {
+              src
+            }
             fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid
             }
