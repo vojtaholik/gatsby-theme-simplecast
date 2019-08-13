@@ -22,7 +22,7 @@ const PodcastProvider = styled(Link)(
 
 function Aside({ markdown }) {
   return (
-    <aside>
+    <aside className="sidebar">
       <div
         sx={{
           mb: 2,

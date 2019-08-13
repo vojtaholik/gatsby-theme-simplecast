@@ -1,5 +1,5 @@
 export default {
-  podcastSeason: "01",
+  podcastSeason: "1",
   headerImageHeight: [300, 400],
   spotifyUrl: "/",
   applePodcastsUrl: "/",

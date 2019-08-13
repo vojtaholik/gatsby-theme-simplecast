@@ -98,10 +98,6 @@ exports.onCreateNode = ({ node, getNode, actions }, options) => {
   createNodeField({
     name: "slug",
     node,
-    //value: slugify(`${node.title}`),
     value: "/" + showsSlug + "/" + node.number + "/" + slugify(`${node.title}`),
-    // value: `${options.episodeSlug ? options.episodeSlug : "show"}/${
-    //   node.number
-    // }/${slugify(node.title)}`,
   })
 }
