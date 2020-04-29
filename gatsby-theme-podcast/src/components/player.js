@@ -262,7 +262,7 @@ export default class Player extends React.Component {
                   width: 40,
                   height: 60,
                   backgroundImage:
-                    'linear-gradient(270deg, #1A2232 20%, rgba(26,34,50,0) 100%)',
+                    'linear-gradient(270deg, #262A42 20%, rgba(26,34,50,0) 100%)',
                 },
                 h3: {
                   overflow: 'hidden',

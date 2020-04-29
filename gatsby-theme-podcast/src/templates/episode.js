@@ -2,7 +2,9 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 import { jsx } from 'theme-ui';
+import { DiscussionEmbed } from 'disqus-react';
 
+import { ContextConsumer } from '../Context';
 import SEO from '../components/seo';
 import Header from '../components/header';
 import Aside from '../components/aside';
@@ -45,6 +47,17 @@ const EpisodeTemplate = ({ data }) => {
               }}
             />
           </article>
+          <ContextConsumer>
+            {context => (
+              <DiscussionEmbed
+                shortname={context.disqusShortName}
+                config={{
+                  identifier: `episode-${episode.num}`,
+                  title: episode.title,
+                }}
+              />
+            )}
+          </ContextConsumer>
         </div>
         <Aside />
       </div>

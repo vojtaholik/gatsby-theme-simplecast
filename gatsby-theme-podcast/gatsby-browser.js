@@ -12,7 +12,7 @@ export const wrapPageElement = ({ element }) => (
   </Styled.root>
 );
 
-export const wrapRootElement = ({ element }) => (
+export const wrapRootElement = ({ element }, options) => (
   <StaticQuery
     query={graphql`
       {
@@ -25,7 +25,13 @@ export const wrapRootElement = ({ element }) => (
     `}
     render={data => (
       <ThemeProvider theme={theme}>
-        <ContextProvider defaultEpId={data.allEpisode.nodes[0].id}>
+        <ContextProvider
+          spotifyUrl={options.spotifyUrl}
+          applePodcastsUrl={options.applePodcastsUrl}
+          googlePodcastsUrl={options.googlePodcastsUrl}
+          disqusShortName={options.disqusShortName}
+          defaultEpId={data.allEpisode.nodes[0].id}
+        >
           {element}
         </ContextProvider>
       </ThemeProvider>

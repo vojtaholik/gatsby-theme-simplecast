@@ -9,6 +9,9 @@ module.exports = {
       resolve: '@sofa-boys/gatsby-theme-podcast',
       options: {
         rssUrl: 'https://anchor.fm/s/1e73d5fc/podcast/rss',
+        disqusShortName: 'sofa-boys',
+        spotifyUrl: 'https://open.spotify.com/show/1tqXpnVZoVSlsXdxvwDa6C',
+        googlePodcastsUrl: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8xZTczZDVmYy9wb2RjYXN0L3Jzcw==',
       },
     },
   ],
