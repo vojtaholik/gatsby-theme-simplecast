@@ -2,7 +2,7 @@
   "name": "@sofa-boys/gatsby-theme-podcast",
   "main": "index.js",
   "description": "Podcast gatsby theme.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "@harry830622",
   "license": "MIT",
   "scripts": {

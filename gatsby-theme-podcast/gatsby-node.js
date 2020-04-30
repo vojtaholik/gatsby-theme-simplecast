@@ -57,6 +57,7 @@ module.exports = {
         component: require.resolve(`./src/templates/episode.js`),
         context: {
           id: node.id,
+          num: node.num,
         },
       });
     });
