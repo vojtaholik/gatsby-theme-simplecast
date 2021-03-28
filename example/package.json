@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@sofa-boys/gatsby-theme-podcast": "*",
+    "gatsby": "^2.21.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

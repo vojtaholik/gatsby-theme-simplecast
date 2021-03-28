@@ -1,7 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "gatsby-theme-simplecast",
-    "demo"
+    "gatsby-theme-podcast",
+    "example"
   ]
 }
