@@ -4,7 +4,7 @@ require("dotenv").config({
 const axios = require("axios")
 const crypto = require("crypto")
 const path = require("path")
-const slugify = require("@sindresorhus/slugify")
+const { slugify } = require("./src/utils/utils")
 
 exports.sourceNodes = async (
   { actions: { createNode, createNodeField }, plugins },
@@ -13,7 +13,7 @@ exports.sourceNodes = async (
   axios.defaults.headers.common.Authorization = `Bearer ${options.simplecastApiSecret}`
   axios.defaults.headers.common.Accept = "application/json"
 
-  const mockupEpisodes = require("./data/mockupEpisodes.json")
+  const mockupEpisodes = require("./data/mockupEpisode.json")
 
   const { data } = options.podcastId
     ? await axios(

@@ -5,7 +5,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { FaPlay, FaPause } from "react-icons/fa"
 import { jsx, Container } from "theme-ui"
-import { keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/react"
 import formatTime from "../lib/formatTime"
 import VisuallyHidden from "@reach/visually-hidden"
 // import VolumeBars from "./volumeBars"
@@ -149,7 +149,7 @@ export default class Player extends React.Component {
 
   seekTime = e => {
     this.setState({
-      tooltipPosition: e.nativeEvent.offsetX,
+      tooltipPosition: e.nativeEvent.pageX + 20,
       tooltipTime: formatTime(this.scrubTime(e)),
     })
   }
@@ -241,6 +241,7 @@ export default class Player extends React.Component {
             alignItems: ["flex-start", "center"],
             pb: [2, "inherit"],
             pt: [0, "inherit"],
+            maxWidth: 1200
           }}
         >
           <div

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { jsx, Flex } from "theme-ui"
+import { jsx, Flex, Box } from "theme-ui"
 import { EpisodeConsumer } from "./context"
 import { FaPlay as PlayIcon } from "react-icons/fa"
 import { MdMenu as MenuIcon, MdClose as CloseMenuIcon } from "react-icons/md"
@@ -17,7 +17,7 @@ function Navigation() {
   const twoDigits = n => (n.toString().length < 2 ? `0${n}` : n)
 
   const Logo = () => (
-    <>
+    <Box>
       <Link to="/">
         <h1 sx={{ fontSize: 6, color: "primary", mb: 0 }}>
           {data.site.siteMetadata.title
@@ -39,7 +39,7 @@ function Navigation() {
           season {twoDigits(config.podcastSeason)}
         </h5>
       )}
-    </>
+    </Box>
   )
 
   const data = useStaticQuery(graphql`
@@ -130,7 +130,7 @@ function Navigation() {
                     activeClassName="active"
                     to={episode.fields.slug}
                   >
-                    <h4>{episode.title}</h4>
+                    <h4 sx={{ fontSize: 16 }}>{episode.title}</h4>
                     {data.allMarkdownRemark.edges.map(({ node: markdown }) => {
                       if (markdown.frontmatter.id === episode.id)
                         return (

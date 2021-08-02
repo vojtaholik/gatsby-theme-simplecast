@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useThemeUI, Header as ThemedHeader, Box, Flex } from "theme-ui"
+import { jsx, useThemeUI, Box, Flex } from "theme-ui"
 import Img from "gatsby-image"
 import { FaPlay as PlayIcon } from "react-icons/fa"
 import VisuallyHidden from "@reach/visually-hidden"
@@ -9,11 +9,13 @@ function Header({ context, episode, image }) {
   const themeContext = useThemeUI()
   const { theme } = themeContext
   return (
-    <ThemedHeader
+    <Box
+      as="header"
       sx={{
+        ...theme.styles.Header,
         backgroundImage: image
           ? "none"
-          : `linear-gradient(224deg, ${theme.colors.primaryLighten50} 0%, ${theme.colors.primaryDarken} 100%)`,
+          : `linear-gradient(224deg, ${theme.colors.primaryLighten50} 0%, ${theme.colors.primaryDarken} 100%)`
       }}
     >
       {image && (
@@ -45,7 +47,7 @@ function Header({ context, episode, image }) {
           </Flex>
         </Flex>
       </Box>
-    </ThemedHeader>
+    </Box>
   )
 }
 

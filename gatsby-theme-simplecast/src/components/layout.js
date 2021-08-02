@@ -2,23 +2,24 @@
 import PropTypes from "prop-types"
 import Navigation from "./navigation"
 import "./layout.css"
-import { jsx, Layout as Wrapper, Container } from "theme-ui"
+import { jsx, Container, Box } from "theme-ui"
 
 function Layout({ children }) {
   return (
-    <Wrapper>
+    <Box>
       <Container
         sx={{
           p: 0,
           display: "flex",
           flexDirection: ["column", "row"],
-          flexGrow: "1",
+          flex: "1",
+          maxWidth: 1200
         }}
       >
         <Navigation eventTypes="click" />
-        <main sx={{ width: "100%", ml: [0, 0, 0, 5] }}>{children}</main>
+        <main sx={{ width: "100%", ml: [ 0, 300] }}>{children}</main>
       </Container>
-    </Wrapper>
+    </Box>
   )
 }
 
