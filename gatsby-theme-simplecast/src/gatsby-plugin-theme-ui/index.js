@@ -103,10 +103,12 @@ export default {
     root: {
       ".episodes_list": {
         backgroundColor: "background",
-        position: ["absolute", "static"],
+        position: ["absolute", "fixed"],
+        overflowY: ["none", "scroll"],
         zIndex: 2,
         width: "100%",
-        maxWidth: [375, 300],
+        maxWidth: ["100%", 300],
+        maxHeight: [ "unset", "100vh"],
         px: 5,
         pt: 40,
         a: {

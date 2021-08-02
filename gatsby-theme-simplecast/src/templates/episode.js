@@ -29,7 +29,7 @@ function EpisodeTemplate({ data: { episode, markdownRemark } }) {
             <SkipNavContent sx={{ maxWidth: ["100%", 710] }}>
               <Header context={context} episode={episode} image={image} />
               <article>
-                <p>{episode.description && episode.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: episode.description && episode.description }}></p>
                 {markdown && (
                   <div dangerouslySetInnerHTML={{ __html: markdown.html }} />
                 )}

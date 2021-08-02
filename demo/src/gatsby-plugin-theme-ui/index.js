@@ -1,4 +1,4 @@
-export default {
+const config = {
   useCustomProperties: true,
   initialColorMode: 'dark',
   colors: {
@@ -14,3 +14,5 @@ export default {
     secondary: '#85FFD0',
   },
 }
+
+export default config

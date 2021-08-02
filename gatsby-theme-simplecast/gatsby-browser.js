@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "./src/components/layout"
 import Player from "./src/components/player"
 import { EpisodeProvider, EpisodeConsumer } from "./src/components/context"
-import { ThemeProvider, Styled } from "theme-ui"
+import { ThemeProvider, Themed } from "theme-ui"
 import theme from "./src/gatsby-plugin-theme-ui/index"
 import { SkipNavLink } from "@reach/skip-nav"
 
@@ -11,7 +11,7 @@ export const wrapPageElement = ({ element, props }, options) => {
   return (
     <ThemeProvider theme={theme}>
       <EpisodeProvider>
-        <Styled.root>
+        <Themed.root>
           <SkipNavLink />
           <Layout {...props}>
             {props.location.pathname.includes(episodeSlug) ||
@@ -22,7 +22,7 @@ export const wrapPageElement = ({ element, props }, options) => {
             ) : null}
             {element}
           </Layout>
-        </Styled.root>
+        </Themed.root>
       </EpisodeProvider>
     </ThemeProvider>
   )
